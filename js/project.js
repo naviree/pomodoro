@@ -15,16 +15,17 @@ const timerStart = document.querySelector(".timer_start");
 const pauseTimer = document.querySelector(".timer_pause");
 const resetTimer = document.querySelector(".timer_reset");
 const timerMinutes = document.querySelector(".timer_minutes");
+const timerSeconds = document.querySelector(".timer_seconds");
 
-let timerValue = 25;
+let minuteValue = 25;
 let timerInterval = null;
 
 timerStart.addEventListener("click", function () {
   if (timerInterval === null) {
     timerInterval = setInterval(function () {
-      timerValue--;
-      timerMinutes.innerHTML = timerValue;
-    }, 60000);
+      minuteValue--;
+      timerMinutes.innerHTML = minuteValue;
+    }, 1000);
     timerPausedOnClick();
   } else {
     clearInterval(timerInterval);
@@ -39,3 +40,11 @@ function timerPausedOnClick() {
     console.log("timer paused");
   });
 }
+
+resetTimer.addEventListener("click", function () {
+  clearInterval(timerInterval);
+  timerInterval = null;
+  minuteValue = 25;
+  timerMinutes.innerHTML = minuteValue;
+  console.log("timer reset");
+});
