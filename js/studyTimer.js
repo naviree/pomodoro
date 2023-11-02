@@ -1,3 +1,5 @@
+import { setBreakTimeScheme } from "./breakTimer.js";
+
 const timerStart = document.querySelector(".timer_start");
 const pauseTimer = document.querySelector(".timer_pause");
 const resetTimer = document.querySelector(".timer_reset");
@@ -14,6 +16,7 @@ function updateTimerDisplay(minutes, seconds) {
 }
 function decrementTimer() {
   if (secondValue === 0) {
+    setBreakTimeScheme("blue");
     if (minuteValue > 0) {
       minuteValue--;
       secondValue = 59;

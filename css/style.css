@@ -4,8 +4,12 @@
   box-sizing: border-box;
 }
 
+:root {
+  --main-bg-color: #ff9999;
+}
+
 body {
-  background: #ff9999;
+  background: var(--main-bg-color);
   font-family: sans-serif;
   display: flex;
   justify-content: center;
