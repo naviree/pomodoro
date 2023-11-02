@@ -20,12 +20,19 @@ const timerSeconds = document.querySelector(".timer_seconds");
 let minuteValue = 25;
 let timerInterval = null;
 
-timerStart.addEventListener("click", function () {
+timerStart.addEventListener("click", () => {
   if (timerInterval === null) {
-    timerInterval = setInterval(function () {
-      minuteValue--;
-      timerMinutes.innerHTML = minuteValue;
-    }, 1000);
+    timerInterval = setInterval(() => {
+      if (minuteValue > 0) {
+        minuteValue--;
+        timerMinutes.textContent = minuteValue;
+      } else {
+        clearInterval(timerInterval);
+        timerInterval = null;
+        // Optionally trigger any other action when timer ends
+        // timerEndAction();
+      }
+    }, 60000); // set this to 60000 for 1 minute
     timerPausedOnClick();
   } else {
     clearInterval(timerInterval);
