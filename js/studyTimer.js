@@ -16,7 +16,6 @@ function updateTimerDisplay(minutes, seconds) {
 }
 function decrementTimer() {
   if (secondValue === 0) {
-    setBreakTimeScheme("blue");
     if (minuteValue > 0) {
       minuteValue--;
       secondValue = 59;
