@@ -1,4 +1,4 @@
-import { setBreakTimeScheme } from "./breakTimer.js";
+import { changeBackgroundColor } from "./changeColor.js";
 
 const timerStart = document.querySelector(".timer_start");
 const pauseTimer = document.querySelector(".timer_pause");
@@ -22,7 +22,7 @@ function decrementTimer() {
     } else {
       stopTimer();
       // Optionally trigger any other action when timer ends
-      // timerEndAction();
+      //timerEndAction();
       return;
     }
   } else {
