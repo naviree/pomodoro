@@ -2,27 +2,32 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pomodoro Timer</title>
-    <link rel="stylesheet" href="/css/style.css">
-    <script type="module" src="/js/timer.js" defer></script>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Pomodoro Timer</title>
+	<link rel="stylesheet" href="/css/style.css">
+	<script type="module" src="/js/timer.js" defer></script>
 </head>
 
 <body>
-    <div class="container">
-        <div class="timer">
-            <div class="timer__time">
-                <span class="timer_minutes">25</span>
-                <span class="timer_colon">:</span>
-                <span class="timer_seconds">00</span>
-            </div>
-            <div class="timer__buttons">
-                <button class="timer_start">Start</button>
-                <button class="timer_reset">Reset</button>
-            </div>
-        </div>
-    </div>
+<div class="container">
+	<div class="top__buttons">
+		<button class="pomodoro">pomodoro</button>
+		<button class="short__break">short break</button>
+		<button class="long__break">long break</button>
+	</div>
+	<div class="timer">
+		<div class="timer__time">
+			<span class="timer_minutes">25</span>
+			<span class="timer_colon">:</span>
+			<span class="timer_seconds">00</span>
+		</div>
+		<div class="timer__buttons">
+			<button class="timer_start">Start</button>
+			<button class="timer_reset">Reset</button>
+		</div>
+	</div>
+</div>
 </body>
 
 </html>

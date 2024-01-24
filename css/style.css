@@ -1,58 +1,66 @@
 body {
-	font-family: "Arial", sans-serif;
-	margin: 0;
-	padding: 0;
-	background-color: #ffc2cd;
-	width: 350px;
+    font-family: "Arial", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffc2cd;
+    height: 100vh;
 }
 
 .container {
-	background-color: #ff6289;
-	border-radius: 8px;
-	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-	display: flex;
-	justify-content: center;
-	height: 30vh;
+    width: 350px;
+    background-color: #ff6289;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 40vh;
+    margin: 20px auto auto;
 }
 
 .timer {
-	display: flex;
-	width: 50%;
+    display: flex;
+    justify-content: center;
+    width: 50%;
 }
 
 .timer__time {
-	margin: auto;
-	padding-bottom: 6px;
-	padding-top: 10px;
-	color: #fff;
+    margin: auto;
+    padding-bottom: 6px;
+    padding-top: 10px;
+    color: #fff;
+    font-size: 3rem;
 }
 
 .timer__buttons {
-	align-items: center;
-	margin: auto;
-	color: #fff;
-	padding-bottom: 10px;
+    align-items: center;
+    margin: auto;
+    color: #fff;
+    padding-bottom: 10px;
 }
+
 .timer_start {
-	padding: 5px;
-	background-color: transparent;
-	color: #fff;
-	border-radius: 6px;
-	border: none;
+    padding: 5px;
+    background-color: transparent;
+    color: #fff;
+    border-radius: 6px;
+    border: none;
 }
+
 .timer_reset {
-	padding: 5px;
-	/* background-color: #ff084a; */
-	background-color: transparent;
-	color: #fff;
-	border-radius: 6px;
-	border: none;
+    padding: 5px;
+    /* background-color: #ff084a; */
+    background-color: transparent;
+    color: #fff;
+    border-radius: 6px;
+    border: none;
 }
 
 .timer_start:hover {
-	background-color: #fc3468;
+    background-color: #fc3468;
 }
 
 .timer_reset:hover {
-	background-color: #fc3468;
+    background-color: #fc3468;
 }
