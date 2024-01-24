@@ -62,7 +62,7 @@ function switchTimer() {
         isStudyTimer = false;
 
     } else {
-        minuteValue = 1;
+        minuteValue = 5;
         isStudyTimer = true;
     }
     secondValue = 0;
@@ -124,7 +124,10 @@ pomodoro.addEventListener("click", () => {
     resetTimerFunction();
 })
 
-shortBreak.addEventListener("click",)
+shortBreak.addEventListener("click", () => {
+
+    switchTimer();
+})
 
 // Reset button event listener
 
