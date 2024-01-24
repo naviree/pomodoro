@@ -1,0 +1,28 @@
+body {
+	font-family: "Arial", sans-serif;
+	margin: 0;
+	padding: 0;
+	background-color: #ccd5ae;
+	width: 350px;
+}
+
+.container {
+	background-color: #d4a373;
+	border-radius: 8px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	display: flex;
+	justify-content: center;
+}
+
+.timer {
+	display: flex;
+	width: 50%;
+	background-color: red;
+	flex-direction: column;
+}
+
+.timer__time {
+	align-items: center;
+	margin: auto;
+	padding-bottom: 6px;
+}
