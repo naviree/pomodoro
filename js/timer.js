@@ -12,8 +12,9 @@ let minuteValue = 25;
 let secondValue = 0;
 let timerInterval = null;
 let studyTimeCounter = 0;
-
 let isStudyTimer = true;
+
+let container = document.querySelector('.container');
 
 function updateTimerDisplay(minutes, seconds) {
     timerMinutes.textContent = String(minutes).padStart(2, "0");
@@ -82,7 +83,6 @@ function resetTimerFunction() {
     updateTimerDisplay(minuteValue, secondValue);
 }
 
-// Start/Pause button event listener
 timerStart.addEventListener("click", () => {
     if (timerInterval === null) {
         startTimer();
@@ -99,6 +99,13 @@ resetTimer.addEventListener("click", () => {
 function breakTimer() {
     console.log("breakTimer");
     minuteValue = 5;
+    secondValue = 0;
+    updateTimerDisplay(minuteValue, secondValue);
+    startTimer();
+}
+
+function longBreakTimer() {
+    minuteValue = 15;
     secondValue = 0;
     updateTimerDisplay(minuteValue, secondValue);
     startTimer();
@@ -122,12 +129,23 @@ timerMinutes.addEventListener("click", () => {
 
 pomodoro.addEventListener("click", () => {
     resetTimerFunction();
+    document.body.style.backgroundColor = "#ffc2cd";
+    container.style.backgroundColor = ('#ff6289');
 })
 
 shortBreak.addEventListener("click", () => {
-
     switchTimer();
+    document.body.style.backgroundColor = "#8ecae6";
+    container.style.backgroundColor = "#219ebc";
 })
+
+longBreak.addEventListener("click", () => {
+    switchTimer();
+    document.body.style.backgroundColor = "#8ecae6";
+    let container = document.querySelector(".container");
+    container.style.backgroundColor = "#219ebc";
+})
+
 
 // Reset button event listener
 

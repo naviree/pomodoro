@@ -37,10 +37,8 @@ body {
     align-items: center;
     margin: auto;
     color: #fff;
-    padding-bottom: 10px;
-    padding: 5px;
+    padding: 5px 5px 10px;
     background-color: transparent;
-    color: #fff;
     border-radius: 6px;
     border: none;
 }
@@ -71,6 +69,7 @@ body {
 
 .buttons:hover {
     background-color: #fc3468;
+    padding: 10px;
 }
 
 .timer_reset:hover {
