@@ -70,9 +70,16 @@ function switchTimer() {
     updateTimerDisplay(minuteValue, secondValue);
 }
 
-function cancelTimerFunction() {
-    stopTimer();
-    switchTimer();
+function longBreakSwitchTimer() {
+    if (isStudyTimer) {
+        minuteValue = 15;
+        isStudyTimer = false;
+
+    } else {
+        minuteValue = 15;
+        isStudyTimer = true;
+    }
+    secondValue = 0;
     updateTimerDisplay(minuteValue, secondValue);
 }
 
@@ -97,7 +104,6 @@ resetTimer.addEventListener("click", () => {
 });
 
 function breakTimer() {
-    console.log("breakTimer");
     minuteValue = 5;
     secondValue = 0;
     updateTimerDisplay(minuteValue, secondValue);
@@ -105,6 +111,7 @@ function breakTimer() {
 }
 
 function longBreakTimer() {
+    console.log("hello world")
     minuteValue = 15;
     secondValue = 0;
     updateTimerDisplay(minuteValue, secondValue);
@@ -140,13 +147,11 @@ shortBreak.addEventListener("click", () => {
 })
 
 longBreak.addEventListener("click", () => {
-    switchTimer();
-    document.body.style.backgroundColor = "#8ecae6";
-    let container = document.querySelector(".container");
-    container.style.backgroundColor = "#219ebc";
-})
 
-
+    longBreakSwitchTimer();
+    document.body.style.backgroundColor = "#559CAD";
+    container.style.backgroundColor = "#4A5899";
+});
 // Reset button event listener
 
 resetTimer.addEventListener("click", resetTimerFunction);
